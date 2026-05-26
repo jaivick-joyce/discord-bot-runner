@@ -2,9 +2,11 @@ name: Run Discord Bot at 9 AM IST
 
 on:
   schedule:
-    # 30 -> Minutes (30 mins)
-    # 03 -> Hours (3:00 AM UTC) -> Jo India me subah ke 9:00 AM IST banega
+    # Yeh automatic subah 9:00 AM IST (3:30 AM UTC) ko trigger karega
     - cron: '30 3 * * *'
+  
+  # Yeh line add karne se tumhein dashboard par manual "Run workflow" ka button mil jayega
+  workflow_dispatch:
 
 jobs:
   run-bot:
